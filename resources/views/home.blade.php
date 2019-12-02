@@ -21,13 +21,12 @@
         </div>
     </div>
 
-    <a class="relative block overlay-container w-full h-1/2-screen" href="#">
+    <a class="relative block overlay-container w-full h-1/2-screen" href="{{ route('post', 'how-i-use-vuejs-on-jquery-websites') }}">
         <div class="text-blue-100 h-full w-full absolute top-0 left-0 text-shadow z-40">
             <div class="flex flex-col items-start justify-center w-full h-full px-6">
-                <div class="mb-2 text-4xl sm:text-5xl md:text-6xl font-bold">How I use vueJs on legacy jQuery websites</div>
+                <div class="mb-2 text-4xl sm:text-5xl md:text-6xl font-bold">How I use vueJs on jQuery websites</div>
                 <div class="sm:text-lg md:text-xl mb-6">3 days ago</div>
             </div>
-
         </div>
         <div class="relative overlay h-full mx-auto bg-cover bg-center bg-no-repeat"
              style="background-image: url(/blog-img/1.jpg);"

@@ -1,7 +1,7 @@
 <?php
 
-Route::get('/', 'HomeController@home');
-Route::get('/blog/{slug}', 'HomeController@blogPost');
+Route::get('/', 'HomeController@home')->name('home');
+Route::get('/blog/{slug}', 'HomeController@blogPost')->name('post');
 
 
 
@@ -16,5 +16,4 @@ Route::get('/blog/{slug}', 'HomeController@blogPost');
  *
  *
  * Add google analytics
- * Add twitter follow me in twoitter
  */
