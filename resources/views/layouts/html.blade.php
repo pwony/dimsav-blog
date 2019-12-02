@@ -47,5 +47,9 @@
     </style>
     @yield('html-content')
     @include('partials.footer')
+
+    @if(App::environment('production'))
+        @include('partials.analytics')
+    @endif
 </body>
 </html>

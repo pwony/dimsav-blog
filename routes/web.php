@@ -13,7 +13,4 @@ Route::get('/blog/{slug}', 'HomeController@blogPost')->name('post');
  * 4. Each blog post page has the required meta tags
  *      title, description, og:image, etc.
  * 5. Each blog post page returns a 200 status
- *
- *
- * Add google analytics
  */
