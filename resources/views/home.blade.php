@@ -1,7 +1,7 @@
 @extends('layouts.html')
 
 @section('html-content')
-    <div class="pt-24 h-screen text-blue-100" style="background: no-repeat center center url(/img/bg.jpg); background-size: cover;">
+    <div class="pt-24 h-screen text-blue-100 bg-cover bg-center bg-no-repeat" style="background-image: url(/img/bg.jpg);">
         <div class="flex flex-col mx-10 md:flex-row md:mx-auto items-center" style="max-width: 900px;">
             <div class="mb-10 md:mb-0 md:mr-10">
                 <img src="/img/dimitris-savvopoulos-photo.png" alt="" style="width: 150px; height: 150px; opacity: 0.9">
@@ -21,17 +21,16 @@
         </div>
     </div>
 
-    <a class="relative block overlay-container" style="width: 100%; height: 75vh;" href="">
-        <div class="text-blue-100" style="width: 100%; height: 100%; z-index: 40;
-        position: absolute; top: 0; left: 0; bottom: 0; text-shadow: 0 2px #2c2c2c; ">
+    <a class="relative block overlay-container w-full h-1/2-screen" href="#">
+        <div class="text-blue-100 h-full w-full absolute top-0 left-0 text-shadow z-40">
             <div class="flex flex-col items-start justify-center w-full h-full px-6">
-                <div class="mb-2 text-4xl sm:text-5xl md:text-6xl font-bold">How to start using vueJs on jQuery websites</div>
+                <div class="mb-2 text-4xl sm:text-5xl md:text-6xl font-bold">How I use vueJs on legacy jQuery websites</div>
                 <div class="sm:text-lg md:text-xl mb-6">3 days ago</div>
             </div>
 
         </div>
-        <div class="relative overlay"
-             style="margin: 0 auto; height: 75vh; background: no-repeat center center url(/blog-img/1.jpg); background-size: cover;"
+        <div class="relative overlay h-full mx-auto bg-cover bg-center bg-no-repeat"
+             style="background-image: url(/blog-img/1.jpg);"
         ></div>
     </a>
 @endsection
