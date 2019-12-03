@@ -12,6 +12,25 @@
 
     {{--  Styles  --}}
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <meta property="og:site_name" content="dimsav" />
+    <meta property="og:type" content="{{ $head_og_type }}" />
+    <meta property="og:title" content="{{ $head_page_title }}" />
+    <meta property="og:description" content="{{ $head_description }}" />
+    <meta property="og:url" content="{{ $head_canonical_url }}" />
+    <meta property="og:image" content="{{ $head_image }}" />
+    @if(isset($head_article_tags) && $head_article_tags)
+        @foreach($head_article_tags as $article_tag)
+            <meta property="article:tag" content="{{ $article_tag }}" />
+        @endforeach
+    @endif
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ $head_page_title }}" />
+    <meta name="twitter:description" content="{{ $head_description }}" />
+    <meta name="twitter:url" content="{{ $head_canonical_url }}" />
+    <meta name="twitter:image" content="{{ $head_image }}" />
+    <meta name="twitter:site" content="@dimsav" />
+
 </head>
 <body>
     <style>
