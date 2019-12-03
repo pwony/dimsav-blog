@@ -108,7 +108,7 @@
             component.
         </p>
 
-        <div class="text-gray-700 px-5 py-5 my-12 font-mono bg-gray-200">
+        <div class="text-gray-700 px-5 py-5 my-12 font-mono bg-gray-200 rounded">
             <div>{{ "import LazyImg from './vue/lazy-img'" }}</div>
             <div>{{ 'const vueRootElements = document.querySelectorAll(".js-dom");' }}</div>
             <div>{{ 'Array.prototype.forEach.call(vueRootElements, (el) =>' }}</div>
