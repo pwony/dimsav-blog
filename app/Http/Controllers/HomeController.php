@@ -31,13 +31,14 @@ class HomeController extends Controller
 
         return view('post', [
             'head_canonical_url' => route('post', $slug),
-            'head_page_title' => 'How to use VueJs on jQuery websites',
-            'head_description' => $head_description,
+            'head_page_title' => 'How to use VueJs on jQuery websites', // (max 70 characters)
+            'head_description' => $head_description, //  (maximum 200 characters)
             'head_og_type' => 'article',
-            'head_image' => '',
-            'head_article_tags' => ['jQuery', 'vueJs'],
+            'head_image' => '', // less than 5MB (duuhh)
+            'head_article_tags' => collect(['jQuery', 'vueJs']),
             'head_article_published_time' => '2019-12-03T19:12:33.000Z',
             'head_article_modified_time' => '2019-12-03T19:12:33.000Z',
+            'head_written_by' => 'Dimitris Savvopoulos',
         ]);
     }
 }

@@ -19,10 +19,16 @@
     <meta property="og:description" content="{{ $head_description }}" />
     <meta property="og:url" content="{{ $head_canonical_url }}" />
     <meta property="og:image" content="{{ $head_image }}" />
-    @if(isset($head_article_tags) && $head_article_tags)
+    @if(isset($head_written_by))
+        <meta name="twitter:label1" content="Written by" />
+        <meta name="twitter:data1" content="{{ $head_written_by }}" />
+    @endif
+    @if(isset($head_article_tags))
         @foreach($head_article_tags as $article_tag)
             <meta property="article:tag" content="{{ $article_tag }}" />
         @endforeach
+        <meta name="twitter:label2" content="Subjects" />
+        <meta name="twitter:data2" content="{{ $head_article_tags->implode(', ') }}" />
     @endif
     @if(isset($head_article_published_time))
         <meta property="article:published_time" content="{{ $head_article_published_time }}" />
@@ -36,6 +42,7 @@
     <meta name="twitter:url" content="{{ $head_canonical_url }}" />
     <meta name="twitter:image" content="{{ $head_image }}" />
     <meta name="twitter:site" content="@dimsav" />
+    <meta name="twitter:creator" content="@dimsav" />
 
 </head>
 <body>
