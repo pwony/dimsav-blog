@@ -20,6 +20,8 @@
     <meta property="og:url" content="{{ $head_canonical_url }}" />
     <meta property="og:image" content="{{ $head_image }}" />
     @if(isset($head_written_by))
+        {{-- See how twitter labels work here:
+        https://twitter.com/levelsio/status/828892835172671489 --}}
         <meta name="twitter:label1" content="Written by" />
         <meta name="twitter:data1" content="{{ $head_written_by }}" />
     @endif
@@ -43,7 +45,10 @@
     <meta name="twitter:image" content="{{ $head_image }}" />
     <meta name="twitter:site" content="@dimsav" />
     <meta name="twitter:creator" content="@dimsav" />
-
+    @if(isset($head_image_width) && isset($head_image_height))
+        <meta property="og:image:width" content="{{ $head_image_width }}" />
+        <meta property="og:image:height" content="{{ $head_image_height }}" />
+    @endif
 </head>
 <body>
     <style>

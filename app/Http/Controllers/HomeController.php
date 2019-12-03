@@ -16,6 +16,8 @@ class HomeController extends Controller
             'head_description' => $head_description,
             'head_og_type' => 'website',
             'head_image' => '',
+            'head_image_width' => '', // number in pixels
+            'head_image_height' => '', // number in pixels
         ]);
     }
 
@@ -35,6 +37,8 @@ class HomeController extends Controller
             'head_description' => $head_description, //  (maximum 200 characters)
             'head_og_type' => 'article',
             'head_image' => '', // less than 5MB (duuhh)
+            'head_image_width' => '', // number in pixels
+            'head_image_height' => '', // number in pixels
             'head_article_tags' => collect(['jQuery', 'vueJs']),
             'head_article_published_time' => '2019-12-03T19:12:33.000Z',
             'head_article_modified_time' => '2019-12-03T19:12:33.000Z',
