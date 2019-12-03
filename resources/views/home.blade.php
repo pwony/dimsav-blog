@@ -10,8 +10,11 @@
                 <p class="mb-2">Hi, I'm Dimitris!</p>
                 I'm a <a class="underline" href="https://github.com/dimsav/">web developer</a>
                 and indie hacker at <a class="underline" href="https://metabook.gr">metabook</a>,
-                and also a Co-organizer of the <a class="underline" href="https://laravel.gr">Laravel Athens User group</a>
-                and author of <a class="underline" href="https://github.com/dimsav/laravel-translatable">Laravel Translatable</a>.
+                and also a Co-organizer of the
+                <a class="underline" href="https://laravel.gr">Laravel Athens User group</a>
+                and author of
+                <a class="underline" href="https://github.com/dimsav/laravel-translatable">
+                    Laravel Translatable</a>.
             </div>
         </div>
         <div class="absolute bottom-0 pb-3 w-full text-center opacity-75">
@@ -21,10 +24,13 @@
         </div>
     </div>
 
-    <a class="relative block overlay-container w-full h-1/2-screen" href="{{ route('post', 'how-i-use-vuejs-on-jquery-websites') }}">
+    <a class="relative block overlay-container w-full h-1/2-screen"
+       href="{{ route('post', 'how-to-use-vuejs-on-jquery-websites') }}">
         <div class="text-blue-100 h-full w-full absolute top-0 left-0 text-shadow z-40">
             <div class="flex flex-col items-start justify-center w-full h-full px-6">
-                <div class="mb-2 text-4xl sm:text-5xl md:text-6xl font-bold">How I use vueJs on jQuery websites</div>
+                <div class="mb-2 text-4xl sm:text-5xl md:text-6xl font-bold"
+                >How to use VueJs on jQuery websites
+                </div>
                 <div class="sm:text-lg md:text-xl mb-6">3 days ago</div>
             </div>
         </div>
