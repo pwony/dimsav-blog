@@ -36,6 +36,8 @@ class HomeController extends Controller
             'head_og_type' => 'article',
             'head_image' => '',
             'head_article_tags' => ['jQuery', 'vueJs'],
+            'head_article_published_time' => '2019-12-03T19:12:33.000Z',
+            'head_article_modified_time' => '2019-12-03T19:12:33.000Z',
         ]);
     }
 }

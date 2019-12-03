@@ -24,6 +24,12 @@
             <meta property="article:tag" content="{{ $article_tag }}" />
         @endforeach
     @endif
+    @if(isset($head_article_published_time))
+        <meta property="article:published_time" content="{{ $head_article_published_time }}" />
+    @endif
+    @if(isset($head_article_modified_time))
+        <meta property="article:modified_time" content="{{ $head_article_modified_time }}" />
+    @endif
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ $head_page_title }}" />
     <meta name="twitter:description" content="{{ $head_description }}" />
