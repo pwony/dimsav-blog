@@ -90,7 +90,7 @@
         </p>
 
         <h2 class="text-gray-800 font-bold text-xl md:text-2xl px-5 my-12">
-            tldr show me da code.
+            tl;dr show me da code.
         </h2>
 
         <p class="text-gray-800 text-xl md:text-2xl px-5 my-12">
