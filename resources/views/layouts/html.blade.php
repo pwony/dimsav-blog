@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}" @yield('html-itemscope')>
 <head>
+    <meta charset="utf-8" />
+    <title>{{ $head_page_title }}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="canonical" href="{{ $head_canonical_url }}" />
+    <meta name="description" content="{{ $head_description }}" />
+
+    {{--  Styles  --}}
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
