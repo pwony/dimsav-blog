@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="canonical" href="{{ $head_canonical_url }}" />
     <meta name="description" content="{{ $head_description }}" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
 
     {{--  Styles  --}}
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
