@@ -32,12 +32,12 @@ class HomeController extends Controller
 
         return view('post', [
             'head_canonical_url' => $post->url,
-            'head_page_title' => $post->title, // (max 70 characters)
-            'head_description' => $post->summary, //  (maximum 200 characters)
+            'head_page_title' => $post->title,
+            'head_description' => $post->summary,
             'head_og_type' => 'article',
-            'head_image' => $post->image_url, // less than 5MB (duuhh)
-            'head_image_width' => '', // number in pixels
-            'head_image_height' => '', // number in pixels
+            'head_image' => $post->image_url,
+            'head_image_width' => $post->image_width,
+            'head_image_height' => $post->image_height,
             'head_article_tags' => collect(['jQuery', 'vueJs']),
             'head_article_published_time' => '2019-12-03T19:12:33.000Z',
             'head_article_modified_time' => '2019-12-03T19:12:33.000Z',

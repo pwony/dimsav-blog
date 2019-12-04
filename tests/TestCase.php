@@ -13,4 +13,9 @@ abstract class TestCase extends BaseTestCase
     {
         Carbon::setTestNow($time);
     }
+
+    protected function assertPositiveInteger($input) {
+        $this->assertIsInt($input);
+        $this->assertGreaterThan(0, $input);
+    }
 }

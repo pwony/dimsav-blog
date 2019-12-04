@@ -12,6 +12,14 @@ class BlogPost
     public $published_at;
     public $published_at_human_friendly;
     public $image_url;
+    /**
+     * @var int number in pixels
+     */
+    public $image_width;
+    /**
+     * @var int number in pixels
+     */
+    public $image_height;
     public $url;
 
     public function __construct()
@@ -21,6 +29,8 @@ class BlogPost
             'because I was coding on existing websites whose frontend was built with jQuery.';
         $this->slug = 'how-to-use-vuejs-on-jquery-websites';
         $this->image_url = '/blog-img/1.jpg';
+        $this->image_width = 160;
+        $this->image_height = 120;
         $this->published_at_human_friendly = '3 days ago';
         $this->published_at = Carbon::parse('Dec 3 2019');
         $this->url = route('blog-post', $this->slug);
