@@ -23,7 +23,7 @@
 
     <div style="max-width: 900px;" class="mx-auto">
         <div class="text-center pt-16 text-gray-500 ">
-            Dev 3, 2019
+            Dec 4, 2019
         </div>
         <div class="pt-8 pb-2 px-5 text-center text-3xl sm:text-5xl md:text-5xl font-bold ">
             How to use vueJs on jQuery websites
@@ -40,8 +40,8 @@
         </p>
 
         <p class="text-xl md:text-2xl px-5 my-12">
-            Before getting used to vue, I was constantly choosing it for new projects, because I was
-            quite familiar with it. This made me very fast at launching apps with laravel, since
+            Before getting used to vue, I was constantly choosing jQuery for new projects, because I
+            was quite familiar with it. This made me very fast at launching apps with laravel, since
             blade is enough for most of the basics.</p>
 
         <p class="text-xl md:text-2xl px-5 my-12">
