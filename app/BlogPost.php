@@ -34,10 +34,10 @@ class BlogPost
     public function __construct()
     {
         $this->id = 1;
-        $this->title = 'How to use VueJs on jQuery legacy websites';
+        $this->title = 'How I use VueJs on jQuery legacy websites';
         $this->summary = 'One of the reasons it was very hard for me to start using vueJs is '.
             'because I was coding on existing websites whose frontend was built with jQuery.';
-        $this->slug = 'how-to-use-vuejs-on-jquery-legacy-websites';
+        $this->slug = 'how-i-use-vuejs-on-jquery-legacy-websites';
         $this->image_url = '/blog-img/1.jpg';
         $this->image_width = 1300;
         $this->image_height = 844;
