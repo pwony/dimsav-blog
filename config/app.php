@@ -56,6 +56,8 @@ return [
 
     'asset_url' => env('ASSET_URL', null),
 
+    'facebook_id' => env('FACEBOOK_APP_ID', null),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone

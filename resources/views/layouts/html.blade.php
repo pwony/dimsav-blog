@@ -14,8 +14,12 @@
     <link href="/css/tailwind.min.css" rel="stylesheet">
 
     <meta property="og:site_name" content="{{ $site_name }}" />
+    @if(config('app.facebook_id'))
+        <meta property="fb:app_id" content="{{ config('app.facebook_id') }}" />
+    @endif
     <meta property="og:type" content="{{ $head_og_type }}" />
     <meta property="og:title" content="{{ $head_page_title }}" />
+    <meta property="og:image:alt" content="{{ $head_page_title }}" />
     <meta property="og:description" content="{{ $head_description }}" />
     <meta property="og:url" content="{{ $head_canonical_url }}" />
     <meta property="og:image" content="{{ $head_image }}" />
