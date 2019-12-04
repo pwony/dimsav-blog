@@ -24,7 +24,7 @@ class WebsiteTest extends TestCase
                  ->assertStatus(200)
                  ->assertSeeText($post->title)
                  ->assertSeeText($post->summary)
-                 ->assertSeeText($post->published_at_human_friendly)
+                 ->assertSeeText($post->published_date)
                  ->assertSee('<link rel="canonical" href="')
                  ->assertDontSee('<link rel="canonical" href=""');
         }

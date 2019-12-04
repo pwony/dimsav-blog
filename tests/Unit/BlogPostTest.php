@@ -59,6 +59,7 @@ class BlogPostTest extends TestCase
             $this->assertTrue(Str::length($post->slug) > 0);
             $this->assertTrue(Str::length($post->image_url) > 0);
             $this->assertTrue(Str::length($post->published_at_human_friendly) > 0);
+            $this->assertTrue(Str::length($post->published_date) > 0);
             $this->assertPositiveInteger($post->image_height);
             $this->assertPositiveInteger($post->image_width);
             $this->assertInstanceOf(Carbon::class, $post->published_at);

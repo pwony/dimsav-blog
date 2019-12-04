@@ -30,7 +30,7 @@
     <div class="bg-white pb-12">
         <div style="max-width: 900px;" class="mx-auto">
             <div class="text-center text-lg pt-16 text-gray-500 ">
-                {{ $blog_post->published_at_human_friendly }}
+                {{ $blog_post->published_date }}
             </div>
             <div class="pt-8 pb-2 px-5 text-center text-3xl sm:text-5xl md:text-5xl font-bold ">
                 {{ $blog_post->title }}

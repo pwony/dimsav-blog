@@ -13,6 +13,7 @@ class BlogPost
     public $slug;
     public $published_at;
     public $modified_at;
+    public $published_date;
     public $published_at_human_friendly;
     public $image_url;
     /**
@@ -38,11 +39,12 @@ class BlogPost
             'because I was coding on existing websites whose frontend was built with jQuery.';
         $this->slug = 'how-to-use-vuejs-on-jquery-websites';
         $this->image_url = '/blog-img/1.jpg';
-        $this->image_width = 160;
-        $this->image_height = 120;
-        $this->published_at_human_friendly = '3 days ago';
-        $this->published_at = Carbon::parse('Dec 3 2019');
-        $this->modified_at = Carbon::parse('Dec 3 2019');
+        $this->image_width = 1300;
+        $this->image_height = 844;
+        $this->published_at = Carbon::parse('2019-12-04 12:00');
+        $this->modified_at = Carbon::parse('2019-12-04 12:00');
+        $this->published_date = $this->published_at->toFormattedDateString();
+        $this->published_at_human_friendly = $this->published_at->diffForHumans();
         $this->url = route('blog-post', $this->slug);
         $this->subjects = collect(['jQuery', 'vueJs']);
     }
