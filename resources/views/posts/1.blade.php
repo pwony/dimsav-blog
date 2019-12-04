@@ -91,15 +91,15 @@
         component.
     </p>
 
-    <div class="text-gray-700 px-5 py-5 my-12 font-mono bg-gray-200 rounded">
-        <div>{{ "import LazyImg from './vue/lazy-img'" }}</div>
-        <div>{{ 'const vueRootElements = document.querySelectorAll(".js-dom");' }}</div>
-        <div>{{ 'Array.prototype.forEach.call(vueRootElements, (el) =>' }}</div>
-        <div class="pl-4">{{ 'new Vue({' }}</div>
-        <div class="pl-8">{{ 'el, components: {' }}</div>
-        <div class="pl-12">{{ 'ImgLazy' }}</div>
-        <div>{!!  "}}))" !!}</div>
-    </div>
+@component('partials.code')
+{{ "import LazyImg from './vue/lazy-img'" }}
+{{ 'const vueRootElements = document.querySelectorAll(".js-dom");' }}
+{{ 'Array.prototype.forEach.call(vueRootElements, (el) =>' }}
+<span class="ml-4">{{ 'new Vue({el, ' }}</span>
+<span class="ml-8">{{ 'components: {' }}</span>
+<span class="ml-12">{{ 'ImgLazy' }}</span>
+{!!  "}}))" !!}
+@endcomponent
 
     <p class="text-xl md:text-2xl px-5 my-12">
         By using the technique above, we were finally able to stop writing new jQuery code and
