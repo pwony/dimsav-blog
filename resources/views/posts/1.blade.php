@@ -19,18 +19,18 @@
     </p>
 
     <p class="text-xl md:text-2xl px-5 my-12">
-        So I wanted to start using vueJs but the challenge was that vue dominates the dom it
+        So I wanted to start using Vue.js but the challenge was that vue dominates the dom it
         uses. And when vue is there, it doesn't give any air for jQuery to breathe.
     </p>
 
     <p class="text-xl md:text-2xl px-5 my-12">
         Luckily though, after searching around on the web with my
         <a href="https://twitter.com/janokary">co-founder</a>, we found a solution on how to use
-        vueJs into projects with jQuery. My goal is to share this know-how with you.
+        Vue into projects with jQuery. My goal is to share this know-how with you.
     </p>
 
     <p class="text-xl md:text-2xl px-5 my-12">
-        One of the things that made it very hard for me to understand how to couple vueJs
+        One of the things that made it very hard for me to understand how to couple Vue.js
         with jQuery was the fact that vue lives in what we all know as a root component and I
         call a "silo".
     </p>
@@ -39,15 +39,15 @@
     </h2>
     <p class="text-xl md:text-2xl px-5 my-12">
         If you have your whole html code wrapped inside a single root component, then you have a
-        big big silo belonging to vueJs. I know, this is what tutorials teach. But if this how
-        you attempt to "inject" vueJs into a jQuery project, that cannot and will not work.
+        big big silo belonging to Vue.js. I know, this is what tutorials teach. But if this how
+        you attempt to "inject" Vue.js into a jQuery project, that cannot and will not work.
     </p>
     <p class="text-xl md:text-2xl px-5 my-12">
         <span class="italic">But I love root components!</span>
         I hear you say. Patience friend, we will get there.
     </p>
     <p class="text-xl md:text-2xl px-5 my-12">
-        One characteristic of vueJs is it absorbs all the window events. Something like a black
+        One characteristic of Vue.js is it absorbs all the window events. Something like a black
         hole. This means that jQuery's
         <span class="inline-block bg-gray-200 rounded px-2
         py-1 font-mono text-sm mx-1">on.('click')</span>
@@ -58,13 +58,13 @@
     <p class="text-xl md:text-2xl px-5 my-12">
         Then,
         <span class="italic text-blue-400">(Hallelujah music in the background)</span>
-        we realized we could have multiple vueJs root components into a page. By doing that we
-        could limit the scope of anti-social but so beautiful vueJs components into smaller
+        we realized we could have multiple Vue.js root components into a page. By doing that we
+        could limit the scope of anti-social but so beautiful Vue.js components into smaller
         black-hole-component-silos.
 
     </p>
     <p class="text-xl md:text-2xl px-5 my-12">
-        So instead of having one huge root component-silo belonging to vueJs, we had to inject
+        So instead of having one huge root component-silo belonging to Vue.js, we had to inject
         multiple mini ones we could use here and there. And as long as these did not interact in
         some way with jQuery, happy life could go on.
     </p>
@@ -110,12 +110,12 @@
 @endcomponent
 
     <p class="text-xl md:text-2xl px-5 my-12">
-        By using the trick above, we were finally able to insert vueJs components anywhere we
+        By using the trick above, we were finally able to insert Vue.js components anywhere we
         like without worrying too much. Also, any new javascript code can now be written with
-        vueJs and slowly replace jQuery with vueJs!
+        Vue.js and slowly replace jQuery with Vue.js!
     </p>
     <p class="text-xl md:text-2xl px-5 my-12">
-        And this makes us happy because vueJs is much more fun to work with!
+        And this makes us happy because Vue.js is much more fun to work with!
     </p>
     <p class="text-xl md:text-2xl px-5 my-12">
         Thank you for reading this!

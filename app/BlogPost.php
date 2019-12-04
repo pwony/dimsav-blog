@@ -34,8 +34,8 @@ class BlogPost
     public function __construct()
     {
         $this->id = 1;
-        $this->title = 'How I use VueJs on jQuery legacy websites';
-        $this->summary = 'One of the reasons it was very hard for me to start using vueJs is '.
+        $this->title = 'How to use Vue.js on jQuery legacy websites';
+        $this->summary = 'One of the reasons it was very hard for me to start using Vue is '.
             'because I was coding on existing websites whose frontend was built with jQuery.';
         $this->slug = 'how-i-use-vuejs-on-jquery-legacy-websites';
         $this->published_at = Carbon::parse('2019-12-04 12:00');
@@ -46,7 +46,7 @@ class BlogPost
         $this->published_date = $this->published_at->toFormattedDateString();
         $this->published_ago = $this->published_at->diffForHumans();
         $this->url = route('blog-post', $this->slug);
-        $this->subjects = collect(['jQuery', 'vueJs']);
+        $this->subjects = collect(['jQuery', 'Vue.js']);
     }
 
     /**
