@@ -51,7 +51,7 @@
         "name": "dimsav.com",
         "logo": {
             "@type": "ImageObject",
-            "url": "https://dimsav.com/img/dimitrios-savvopoulos-web-square-big.jpg",
+            "url": "{{ asset('img/dimitrios-savvopoulos-web-square-big.jpg') }}",
             "width": 902,
             "height": 902
         }

@@ -17,7 +17,7 @@ class HomeController extends Controller
             'head_page_title' => 'Dimitris Blog',
             'head_description' => $head_description,
             'head_og_type' => 'website',
-            'head_image' => 'https://dimsav.com/img/bg.jpg',
+            'head_image' => asset('img/bg.jpg'),
             'head_image_width' => 2400,
             'head_image_height' => 1600,
             'blog_posts' => BlogPost::published(),
