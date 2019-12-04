@@ -11,17 +11,22 @@ class WebsiteTest extends TestCase
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200);
+        $response->assertStatus(200)
+                 ->assertSee('<link rel="canonical" href="')
+                 ->assertDontSee('<link rel="canonical" href=""');
     }
 
     public function testBlogPostPage()
     {
         $posts = BlogPost::all();
         foreach ($posts as $post) {
-            $re = $this->get($post->url)->assertStatus(200);
-            $re->assertSeeText($post->title);
-            $re->assertSeeText($post->summary);
-            $re->assertSeeText($post->published_at_human_friendly);
+            $this->get($post->url)
+                 ->assertStatus(200)
+                 ->assertSeeText($post->title)
+                 ->assertSeeText($post->summary)
+                 ->assertSeeText($post->published_at_human_friendly)
+                 ->assertSee('<link rel="canonical" href="')
+                 ->assertDontSee('<link rel="canonical" href=""');
         }
     }
 
