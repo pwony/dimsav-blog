@@ -38,11 +38,11 @@ class BlogPost
         $this->summary = 'One of the reasons it was very hard for me to start using vueJs is '.
             'because I was coding on existing websites whose frontend was built with jQuery.';
         $this->slug = 'how-i-use-vuejs-on-jquery-legacy-websites';
-        $this->image_url = asset('/blog-img/1.jpg');
+        $this->published_at = Carbon::parse('2019-12-04 12:00');
+        $this->modified_at = Carbon::parse('2019-12-04 16:00');
+        $this->image_url = asset('/blog-img/1.jpg').'?v='.$this->modified_at->timestamp;
         $this->image_width = 1300;
         $this->image_height = 844;
-        $this->published_at = Carbon::parse('2019-12-04 12:00');
-        $this->modified_at = Carbon::parse('2019-12-04 12:00');
         $this->published_date = $this->published_at->toFormattedDateString();
         $this->published_ago = $this->published_at->diffForHumans();
         $this->url = route('blog-post', $this->slug);
