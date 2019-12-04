@@ -14,7 +14,7 @@ class BlogPost
     public $published_at;
     public $modified_at;
     public $published_date;
-    public $published_at_human_friendly;
+    public $published_ago;
     public $image_url;
     /**
      * @var int number in pixels
@@ -44,7 +44,7 @@ class BlogPost
         $this->published_at = Carbon::parse('2019-12-04 12:00');
         $this->modified_at = Carbon::parse('2019-12-04 12:00');
         $this->published_date = $this->published_at->toFormattedDateString();
-        $this->published_at_human_friendly = $this->published_at->diffForHumans();
+        $this->published_ago = $this->published_at->diffForHumans();
         $this->url = route('blog-post', $this->slug);
         $this->subjects = collect(['jQuery', 'vueJs']);
     }

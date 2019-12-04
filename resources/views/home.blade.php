@@ -40,7 +40,7 @@
                     <div class="mb-2 text-4xl sm:text-5xl md:text-6xl font-bold"
                     >{{ $blog_post->title }}
                     </div>
-                    <div class="sm:text-lg md:text-xl mb-6">{{ $blog_post->published_at_human_friendly }}</div>
+                    <div class="sm:text-lg md:text-xl mb-6">{{ $blog_post->published_ago }}</div>
                 </div>
             </div>
             <div class="relative overlay h-full mx-auto bg-cover bg-center bg-no-repeat"
