@@ -2,9 +2,11 @@
 
 @section('html-content')
     <div class="pt-24 h-screen text-blue-100 bg-cover bg-center bg-no-repeat" style="background-image: url(/img/bg.jpg);">
-        <div class="flex flex-col mx-10 md:flex-row md:mx-auto items-center" style="max-width: 900px;">
+        <div class="flex flex-col mx-10 md:flex-row md:px-10 md:mx-auto items-center"
+             style="max-width: 900px;">
             <div class="mb-10 md:mb-0 md:mr-10">
-                <img src="/img/dimitris-savvopoulos-photo.png" alt="" style="width: 150px; height: 150px; opacity: 0.9">
+                <img src="/img/dimitris-savvopoulos-photo.png" alt="Dimsav blog logo" style="width:
+                150px; height: 150px; opacity: 0.9">
             </div>
             <div class="text-xl flex-1">
                 <p class="mb-2">Hi, I'm Dimitris!</p>

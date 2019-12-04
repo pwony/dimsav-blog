@@ -83,7 +83,7 @@
 }
 </script>
 </head>
-<body>
+<body class="text-gray-800">
     <style>
         svg {
             fill: currentColor;
@@ -123,6 +123,9 @@
 
         .h-1\/2-screen {
             height: 50vh;
+        }
+        p a {
+            text-decoration: underline;
         }
     </style>
     @yield('html-content')
