@@ -5,6 +5,7 @@ namespace Tests\Unit;
 use App\BlogPost;
 use App\BlogPostCollection;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Tests\TestCase;
 
@@ -60,6 +61,9 @@ class BlogPostTest extends TestCase
             $this->assertPositiveInteger($post->image_height);
             $this->assertPositiveInteger($post->image_width);
             $this->assertInstanceOf(Carbon::class, $post->published_at);
+            $this->assertInstanceOf(Carbon::class, $post->modified_at);
+            $this->assertInstanceOf(Collection::class, $post->subjects);
+            $this->assertPositiveInteger($post->subjects->count());
         }
     }
 }

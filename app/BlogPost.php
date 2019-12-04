@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 
 class BlogPost
 {
@@ -10,6 +11,7 @@ class BlogPost
     public $summary;
     public $slug;
     public $published_at;
+    public $modified_at;
     public $published_at_human_friendly;
     public $image_url;
     /**
@@ -22,6 +24,11 @@ class BlogPost
     public $image_height;
     public $url;
 
+    /**
+     * @var Collection
+     */
+    public $subjects;
+
     public function __construct()
     {
         $this->title = 'How to use VueJs on jQuery websites';
@@ -33,7 +40,9 @@ class BlogPost
         $this->image_height = 120;
         $this->published_at_human_friendly = '3 days ago';
         $this->published_at = Carbon::parse('Dec 3 2019');
+        $this->modified_at = Carbon::parse('Dec 3 2019');
         $this->url = route('blog-post', $this->slug);
+        $this->subjects = collect(['jQuery', 'vueJs']);
     }
 
     /**

@@ -38,9 +38,9 @@ class HomeController extends Controller
             'head_image' => $post->image_url,
             'head_image_width' => $post->image_width,
             'head_image_height' => $post->image_height,
-            'head_article_tags' => collect(['jQuery', 'vueJs']),
-            'head_article_published_time' => '2019-12-03T19:12:33.000Z',
-            'head_article_modified_time' => '2019-12-03T19:12:33.000Z',
+            'head_article_tags' => $post->subjects,
+            'head_article_published_time' => $post->published_at->format('c'),
+            'head_article_modified_time' => $post->modified_at->format('c'),
             'blog_post' => $post,
         ]);
     }
