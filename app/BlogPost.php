@@ -6,12 +6,18 @@ use Illuminate\Support\Carbon;
 
 class BlogPost
 {
+    public $title;
     public $slug;
     public $published_at;
+    public $published_at_human_friendly;
+    public $image_url;
 
     public function __construct()
     {
+        $this->title = 'How to use VueJs on jQuery websites';
         $this->slug = 'how-to-use-vuejs-on-jquery-websites';
+        $this->image_url = '/blog-img/1.jpg';
+        $this->published_at_human_friendly = '3 days ago';
         $this->published_at = Carbon::parse('Dec 3 2019');
     }
 
