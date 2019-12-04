@@ -51,6 +51,7 @@ class BlogPostTest extends TestCase
     public function testAllBlogPostsContainRequiredProperties()
     {
         foreach (BlogPost::all() as $post) {
+            $this->assertPositiveInteger($post->id);
             $this->assertTrue(Str::length($post->title) > 0);
             $this->assertTrue(Str::length($post->title) <= 70);
             $this->assertTrue(Str::length($post->summary) > 0);

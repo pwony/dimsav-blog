@@ -18,7 +18,10 @@ class WebsiteTest extends TestCase
     {
         $posts = BlogPost::all();
         foreach ($posts as $post) {
-            $this->get($post->url)->assertStatus(200);
+            $re = $this->get($post->url)->assertStatus(200);
+            $re->assertSeeText($post->title);
+            $re->assertSeeText($post->summary);
+            $re->assertSeeText($post->published_at_human_friendly);
         }
     }
 

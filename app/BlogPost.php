@@ -7,6 +7,7 @@ use Illuminate\Support\Collection;
 
 class BlogPost
 {
+    public $id;
     public $title;
     public $summary;
     public $slug;
@@ -31,6 +32,7 @@ class BlogPost
 
     public function __construct()
     {
+        $this->id = 1;
         $this->title = 'How to use VueJs on jQuery websites';
         $this->summary = 'One of the reasons it was very hard for me to start using vueJs is '.
             'because I was coding on existing websites whose frontend was built with jQuery.';

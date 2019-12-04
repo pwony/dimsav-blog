@@ -30,7 +30,7 @@ class HomeController extends Controller
             abort(404);
         }
 
-        return view('post', [
+        return view('posts.'.$post->id, [
             'head_canonical_url' => $post->url,
             'head_page_title' => $post->title,
             'head_description' => $post->summary,
