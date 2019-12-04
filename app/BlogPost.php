@@ -11,6 +11,7 @@ class BlogPost
     public $published_at;
     public $published_at_human_friendly;
     public $image_url;
+    public $url;
 
     public function __construct()
     {
@@ -19,11 +20,7 @@ class BlogPost
         $this->image_url = '/blog-img/1.jpg';
         $this->published_at_human_friendly = '3 days ago';
         $this->published_at = Carbon::parse('Dec 3 2019');
-    }
-
-    public function getImageUrl()
-    {
-        return '/blog-img/1.jpg';
+        $this->url = route('blog-post', $this->slug);
     }
 
     /**

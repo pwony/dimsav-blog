@@ -27,7 +27,7 @@ class HomeController extends Controller
     public function blogPost($slug)
     {
         if ($slug != 'how-to-use-vuejs-on-jquery-websites') {
-            return redirect(route('post', 'how-to-use-vuejs-on-jquery-websites'));
+            return redirect(route('blog-post', 'how-to-use-vuejs-on-jquery-websites'));
         }
 
         $head_description = 'One of the reasons it was very hard for me to start using vueJs for a '.
@@ -35,7 +35,7 @@ class HomeController extends Controller
             'frontend was built with jQuery.';
 
         return view('post', [
-            'head_canonical_url' => route('post', $slug),
+            'head_canonical_url' => route('blog-post', $slug),
             'head_page_title' => 'How to use VueJs on jQuery websites', // (max 70 characters)
             'head_description' => $head_description, //  (maximum 200 characters)
             'head_og_type' => 'article',

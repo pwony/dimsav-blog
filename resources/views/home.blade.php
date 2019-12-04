@@ -28,7 +28,7 @@
 
     @foreach($blog_posts as $blog_post)
         <a class="relative block overlay-container w-full h-1/2-screen"
-           href="{{ route('post', $blog_post->slug) }}">
+           href="{{ $blog_post->url }}">
             <div class="text-blue-100 h-full w-full absolute top-0 left-0 text-shadow z-40">
                 <div class="flex flex-col items-start justify-center w-full h-full px-6">
                     <div class="mb-2 text-4xl sm:text-5xl md:text-6xl font-bold"
