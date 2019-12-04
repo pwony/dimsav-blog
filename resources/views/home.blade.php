@@ -1,12 +1,18 @@
 @extends('layouts.html')
 
 @section('html-content')
-    <div class="pt-24 h-screen text-blue-100 bg-cover bg-center bg-no-repeat" style="background-image: url(/img/bg.jpg);">
+    <div class="pt-24 h-screen text-blue-100 bg-cover bg-center bg-no-repeat"
+         style="background-image: url({{ $site_image_url }});">
         <div class="flex flex-col mx-10 md:flex-row md:px-10 md:mx-auto items-center"
              style="max-width: 900px;">
             <div class="mb-10 md:mb-0 md:mr-10">
                 <img src="/img/dimitris-savvopoulos-photo.png" alt="{{ $site_name }} logo" style="width:
                 150px; height: 150px; opacity: 0.9">
+{{--
+    Prioritize header image. Idea stolen from
+    https://justmarkup.com/articles/2015-02-02-prioritize-loading-of-background-images/
+--}}
+                <img src="{{ $site_image_url }}" alt="" style="display: none;">
             </div>
             <div class="text-xl flex-1">
                 <p class="mb-2">Hi, I'm Dimitris!</p>

@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/favicon.png" type="image/png" />
 
     {{--  Styles  --}}
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/css/tailwind.min.css" rel="stylesheet">
 
     <meta property="og:site_name" content="{{ $site_name }}" />
     <meta property="og:type" content="{{ $head_og_type }}" />
@@ -85,6 +85,9 @@
 </head>
 <body class="text-gray-800">
     <style>
+        body {
+            background-color: #081623;
+        }
         svg {
             fill: currentColor;
         }

@@ -12,5 +12,6 @@ class Controller extends BaseController
         View::share('site_name', 'Dimitris Blog');
         View::share('twitter_url', 'https://twitter.com/dimsav');
         View::share('twitter_handle', '@dimsav');
+        View::share('site_image_url', '/img/bg.jpg');
     }
 }
