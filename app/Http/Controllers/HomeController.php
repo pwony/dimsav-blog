@@ -30,14 +30,10 @@ class HomeController extends Controller
             abort(404);
         }
 
-        $head_description = 'One of the reasons it was very hard for me to start using vueJs for a '.
-            'long time on production is because I was mostly coding on existing websites whose '.
-            'frontend was built with jQuery.';
-
         return view('post', [
             'head_canonical_url' => $post->url,
             'head_page_title' => $post->title, // (max 70 characters)
-            'head_description' => $head_description, //  (maximum 200 characters)
+            'head_description' => $post->summary, //  (maximum 200 characters)
             'head_og_type' => 'article',
             'head_image' => $post->image_url, // less than 5MB (duuhh)
             'head_image_width' => '', // number in pixels
@@ -45,6 +41,7 @@ class HomeController extends Controller
             'head_article_tags' => collect(['jQuery', 'vueJs']),
             'head_article_published_time' => '2019-12-03T19:12:33.000Z',
             'head_article_modified_time' => '2019-12-03T19:12:33.000Z',
+            'blog_post' => $post,
         ]);
     }
 }

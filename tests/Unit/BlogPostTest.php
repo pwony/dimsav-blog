@@ -51,6 +51,7 @@ class BlogPostTest extends TestCase
     {
         foreach (BlogPost::all() as $post) {
             $this->assertTrue(Str::length($post->title) > 0);
+            $this->assertTrue(Str::length($post->summary) > 0);
             $this->assertTrue(Str::length($post->slug) > 0);
             $this->assertTrue(Str::length($post->image_url) > 0);
             $this->assertTrue(Str::length($post->published_at_human_friendly) > 0);

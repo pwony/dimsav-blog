@@ -30,9 +30,7 @@
         </div>
 
         <p class="text-xl md:text-2xl px-5 my-12">
-            One of the reasons it was very hard for me to start using vueJs for a long time on
-            production is because I was mostly coding on existing websites whose frontend was built
-            with jQuery.
+            {{ $blog_post->summary }}
         </p>
 
         <p class="text-xl md:text-2xl px-5 my-12">
