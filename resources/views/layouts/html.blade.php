@@ -37,8 +37,8 @@
     <meta name="twitter:description" content="{{ $head_description }}" />
     <meta name="twitter:url" content="{{ $head_canonical_url }}" />
     <meta name="twitter:image" content="{{ $head_image }}" />
-    <meta name="twitter:site" content="@dimsav" />
-    <meta name="twitter:creator" content="@dimsav" />
+    <meta name="twitter:site" content="{{ $twitter_handle }}" />
+    <meta name="twitter:creator" content="{{ $twitter_handle }}" />
     <meta property="og:image:width" content="{{ $head_image_width }}" />
     <meta property="og:image:height" content="{{ $head_image_height }}" />
 

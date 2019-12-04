@@ -143,7 +143,7 @@
         </p>
         <p class="text-xl md:text-2xl px-5 my-12">
             Thank you for reading this! If you use a different approach, please
-            <a href="https://twitter.com/dimsav">do share it</a> with me!
+            <a href="{{ $twitter_url }}">do share it</a> with me!
         </p>
     </div>
 @endsection
