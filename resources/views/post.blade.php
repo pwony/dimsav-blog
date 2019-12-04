@@ -42,7 +42,8 @@
         <p class="text-xl md:text-2xl px-5 my-12">
             Before getting used to vue, I was constantly choosing jQuery for new projects, because I
             was quite familiar with it. This made me very fast at launching apps with laravel, since
-            blade is enough for most of the basics.</p>
+            blade is enough to create an
+            <a href="https://en.wikipedia.org/wiki/Minimum_viable_product">MVP</a>.</p>
 
         <p class="text-xl md:text-2xl px-5 my-12">
             But, as soon as the projects started growing, more complex functionality was required.
