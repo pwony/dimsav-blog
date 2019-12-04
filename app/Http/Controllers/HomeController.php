@@ -10,16 +10,16 @@ class HomeController extends Controller
     {
         $head_description = 'I\'m a web developer and indie hacker at metabook,'.
             ' and also a Co-organizer of the Laravel Athens User group and author '.
-            'of Laravel Translatable. ';
+            'of Laravel Translatable.';
 
         return view('home', [
             'head_canonical_url' => route('home'),
             'head_page_title' => 'Dimitris Blog',
             'head_description' => $head_description,
             'head_og_type' => 'website',
-            'head_image' => '',
-            'head_image_width' => '', // number in pixels
-            'head_image_height' => '', // number in pixels
+            'head_image' => 'https://dimsav.com/img/bg.jpg',
+            'head_image_width' => 2400,
+            'head_image_height' => 1600,
             'blog_posts' => BlogPost::published(),
         ]);
     }
