@@ -15,7 +15,7 @@
     <p class="text-xl md:text-2xl px-5 my-12">
         But, as soon as the projects started growing, more complex functionality was required.
         For me this was the moment to realize jQuery was not enough, especially when I wanted to
-        provide the perfect frontend experience to my website's users started doing ajax calls.
+        provide the perfect experience to my website's users.
     </p>
 
     <p class="text-xl md:text-2xl px-5 my-12">
@@ -30,17 +30,17 @@
     </p>
 
     <p class="text-xl md:text-2xl px-5 my-12">
-        One of the things that made it very hard for me to understand on how to couple vueJs
+        One of the things that made it very hard for me to understand how to couple vueJs
         with jQuery was the fact that vue lives in what we all know as a root component and I
         call a "silo".
     </p>
     <h2 class="font-bold text-xl md:text-2xl px-5 my-12">
-        What is a silo?
+        What tutorials teach
     </h2>
     <p class="text-xl md:text-2xl px-5 my-12">
         If you have your whole html code wrapped inside a single root component, then you have a
         big big silo belonging to vueJs. I know, this is what tutorials teach. But if this how
-        you attempt to "inject" vueJs into a jQuery, that cannot and will not work.
+        you attempt to "inject" vueJs into a jQuery project, that cannot and will not work.
     </p>
     <p class="text-xl md:text-2xl px-5 my-12">
         <span class="italic">But I love root components!</span>
@@ -51,49 +51,57 @@
         hole. This means that jQuery's
         <span class="inline-block bg-gray-200 rounded px-2
         py-1 font-mono text-sm mx-1">on.('click')</span>
-        wouldn't work inside a vue component. Your top navigation and hamburger menu code with
-        jQuery would stop work for instance.
+        wouldn't work inside a vue component. Your top navigation and hamburger menu code coded
+        with jQuery would stop work for instance.
 
     </p>
     <p class="text-xl md:text-2xl px-5 my-12">
         Then,
-        <span class="italic">(Hallelujah music in the background)</span>
+        <span class="italic text-blue-400">(Hallelujah music in the background)</span>
         we realized we could have multiple vueJs root components into a page. By doing that we
-        could limit the scope of anti-social but so beautiful vueJs into smaller black hole
-        silos.
+        could limit the scope of anti-social but so beautiful vueJs components into smaller
+        black-hole-component-silos.
+
     </p>
     <p class="text-xl md:text-2xl px-5 my-12">
-        So instead of having one huge root component silo belonging to vueJs, we had to inject
+        So instead of having one huge root component-silo belonging to vueJs, we had to inject
         multiple mini ones we could use here and there. And as long as these did not interact in
         some way with jQuery, happy life could go on.
     </p>
 
     <p class="text-xl md:text-2xl px-5 my-12">
-        Enough with the theory and the sentimentals.
+        Enough with the theory and the sentimental talk. Let's see some code.
     </p>
 
     <h2 class="font-bold text-xl md:text-2xl px-5 my-12">
-        tl;dr show me da code.
+        The code
     </h2>
 
     <p class="text-xl md:text-2xl px-5 my-12">
-        On metabook.gr, we wanted to lazy load the book covers. This is the blade code:
+        On our passion project <a href="https://metabook.gr">metabook.gr</a> (don't open the link,
+        unless
+        you speak greek), we wanted to lazy load the book covers.
     </p>
-
     <p class="text-xl md:text-2xl px-5 my-12">
-        {{ '<lazy-img class="vue-root" src="/image.jpg">' }}
+        You clicked the link nevertheless, didn't you?
     </p>
+    <p class="text-xl md:text-2xl px-5 my-12">
+        Anyway, this is the html code of our vue component:
+    </p>
+@component('partials.code')
+{{ '<lazy-img class="vue-root" src="/image.jpg">' }}
+@endcomponent
     <p class="text-xl md:text-2xl px-5 my-12">
         Of course that won't work unless we tell javascript to load it as a vue component.
     </p>
-    <p class="text-xl md:text-2xl px-5 my-12">
-        In our app.js we declare that every element witht he class ".vue-root" is a vue root
+    <p class="text-xl md:text-2xl px-5 my-12 font-bold">
+        In our app.js we declare that every element with he class ".vue-root" is a vue root
         component.
     </p>
 
 @component('partials.code')
 {{ "import LazyImg from './vue/lazy-img'" }}
-{{ 'const vueRootElements = document.querySelectorAll(".js-dom");' }}
+{{ 'const vueRootElements = document.querySelectorAll(".vue-root");' }}
 {{ 'Array.prototype.forEach.call(vueRootElements, (el) =>' }}
 <span class="ml-4">{{ 'new Vue({el, ' }}</span>
 <span class="ml-8">{{ 'components: {' }}</span>
@@ -102,14 +110,17 @@
 @endcomponent
 
     <p class="text-xl md:text-2xl px-5 my-12">
-        By using the technique above, we were finally able to stop writing new jQuery code and
-        write only vueJs code.
+        By using the trick above, we were finally able to insert vueJs components anywhere we
+        like without worrying too much. Also, any new javascript code can now be written with
+        vueJs and slowly replace jQuery with vueJs!
     </p>
     <p class="text-xl md:text-2xl px-5 my-12">
-        This makes us happy because vueJs is much more fun to work with!
+        And this makes us happy because vueJs is much more fun to work with!
     </p>
     <p class="text-xl md:text-2xl px-5 my-12">
-        Thank you for reading this! If you use a different approach, please
+        Thank you for reading this!
+        <br>
+        If you use a different approach, please
         <a href="{{ $twitter_url }}">do share it</a> with me!
     </p>
 
