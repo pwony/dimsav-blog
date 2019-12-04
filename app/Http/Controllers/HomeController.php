@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\BlogPost;
+
 class HomeController extends Controller
 {
     public function home()
@@ -18,6 +20,7 @@ class HomeController extends Controller
             'head_image' => '',
             'head_image_width' => '', // number in pixels
             'head_image_height' => '', // number in pixels
+            'blog_posts' => BlogPost::published(),
         ]);
     }
 
