@@ -17,6 +17,7 @@
     @if(config('app.facebook_id'))
         <meta property="fb:app_id" content="{{ config('app.facebook_id') }}" />
     @endif
+    <meta property="ia:markup_url" content="{{ $head_canonical_url }}" />
     <meta property="og:type" content="{{ $head_og_type }}" />
     <meta property="og:title" content="{{ $head_page_title }}" />
     <meta property="og:image:alt" content="{{ $head_page_title }}" />
