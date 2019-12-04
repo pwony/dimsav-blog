@@ -7,11 +7,11 @@
         <a href="{{ route('home') }}">
             <div class="flex flex-row items-center justify-center py-4 mx-auto text-blue-100 "
                  style="max-width: 900px;">
-                <img src="/img/dimitris-savvopoulos-photo.png" alt="Dimsav blog logo"
+                <img src="/img/dimitris-savvopoulos-photo.png" alt="{{ $site_name }} logo"
                      class="mr-4"
                      style="width: 60px; height: 60px;">
                 <div class="text-xl">
-                    Dimsav blog
+                    {{ $site_name }}
                 </div>
             </div>
         </a>

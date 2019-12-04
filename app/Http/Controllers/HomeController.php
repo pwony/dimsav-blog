@@ -14,7 +14,7 @@ class HomeController extends Controller
 
         return view('home', [
             'head_canonical_url' => route('home'),
-            'head_page_title' => 'dimsav',
+            'head_page_title' => 'Dimitris Blog',
             'head_description' => $head_description,
             'head_og_type' => 'website',
             'head_image' => '',

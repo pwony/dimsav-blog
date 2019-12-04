@@ -13,7 +13,7 @@
     {{--  Styles  --}}
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
-    <meta property="og:site_name" content="dimsav" />
+    <meta property="og:site_name" content="{{ $site_name }}" />
     <meta property="og:type" content="{{ $head_og_type }}" />
     <meta property="og:title" content="{{ $head_page_title }}" />
     <meta property="og:description" content="{{ $head_description }}" />
