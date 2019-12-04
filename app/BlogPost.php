@@ -6,19 +6,18 @@ use Illuminate\Support\Carbon;
 
 class BlogPost
 {
+    public $slug;
+    public $published_at;
+
+    public function __construct()
+    {
+        $this->slug = 'how-to-use-vuejs-on-jquery-websites';
+        $this->published_at = Carbon::parse('Dec 3 2019');
+    }
+
     public function getImageUrl()
     {
         return '/blog-img/1.jpg';
-    }
-
-    public function getSlug()
-    {
-        return 'how-to-use-vuejs-on-jquery-websites';
-    }
-
-    public function getPublishedAt()
-    {
-        return Carbon::parse('Dec 3 2019');
     }
 
     /**

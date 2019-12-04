@@ -15,14 +15,14 @@ class BlogPostCollection extends Collection
     public function onlyPublished()
     {
         return $this->filter(function (BlogPost $post) {
-            return $post->getPublishedAt() < now();
+            return $post->published_at < now();
         });
     }
 
     public function whereSlug($slug)
     {
         return $this->filter(function (BlogPost $post) use ($slug) {
-            return $post->getSlug() == $slug;
+            return $post->slug == $slug;
         });
     }
 }
