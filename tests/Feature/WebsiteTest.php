@@ -21,4 +21,9 @@ class WebsiteTest extends TestCase
             $this->get($post->url)->assertStatus(200);
         }
     }
+
+    public function testNonExistingBlogPost()
+    {
+        $this->get('/blog/foobar')->assertStatus(404);
+    }
 }

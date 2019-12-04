@@ -26,10 +26,9 @@ class HomeController extends Controller
 
     public function blogPost($slug)
     {
-        $post = BlogPost::findBySlug($slug);
-//        if ($slug != 'how-to-use-vuejs-on-jquery-websites') {
-//            return redirect(route('blog-post', 'how-to-use-vuejs-on-jquery-websites'));
-//        }
+        if (!$post = BlogPost::findBySlug($slug)) {
+            abort(404);
+        }
 
         $head_description = 'One of the reasons it was very hard for me to start using vueJs for a '.
             'long time on production is because I was mostly coding on existing websites whose '.
