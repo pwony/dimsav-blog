@@ -95,7 +95,7 @@
         Of course that won't work unless we tell javascript to load it as a vue component.
     </p>
     <p class="text-xl md:text-2xl px-5 my-12 font-bold">
-        In our app.js we declare that every element with he class ".vue-root" is a vue root
+        In our app.js we declare that every element with the class ".vue-root" is a vue root
         component.
     </p>
 
