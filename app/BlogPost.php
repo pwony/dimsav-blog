@@ -31,22 +31,21 @@ class BlogPost
      */
     public $subjects;
 
-    public function __construct()
+    public function __construct($config)
     {
-        $this->id = 1;
-        $this->title = 'How to use Vue.js on jQuery legacy websites';
-        $this->summary = 'One of the reasons it was very hard for me to start using Vue is '.
-            'because I was coding on existing websites whose frontend was built with jQuery.';
-        $this->slug = 'how-i-use-vuejs-on-jquery-legacy-websites';
-        $this->published_at = Carbon::parse('2019-12-04 12:00');
-        $this->modified_at = Carbon::parse('2019-12-04 16:00');
-        $this->image_url = asset('/blog-img/1.jpg').'?v='.$this->modified_at->timestamp;
+        $this->id = $config['id'];
+        $this->title = $config['title'];
+        $this->summary = $config['summary'];
+        $this->slug = $config['slug'];
+        $this->published_at = Carbon::parse($config['published_at']);
+        $this->modified_at = Carbon::parse($config['modified_at']);
+        $this->image_url = asset($config['image_url']).'?v='.$this->modified_at->timestamp;
         $this->image_width = 1300;
         $this->image_height = 844;
         $this->published_date = $this->published_at->toFormattedDateString();
         $this->published_ago = $this->published_at->diffForHumans();
         $this->url = route('blog-post', $this->slug);
-        $this->subjects = collect(['jQuery', 'Vue.js']);
+        $this->subjects = collect($config['subjects']);
     }
 
     /**
@@ -54,7 +53,11 @@ class BlogPost
      */
     public static function all()
     {
-        return new BlogPostCollection([new BlogPost()]);
+        $collection = new BlogPostCollection;
+        foreach (config('blog-posts') as $config) {
+            $collection->push(new BlogPost($config));
+        }
+        return $collection;
     }
 
     /**
