@@ -20,6 +20,28 @@ class BlogPostRepo
 
 
     /**
+     * @param BlogPost $post
+     *
+     * @return BlogPost|null
+     */
+    public static function findNextOf(BlogPost $post)
+    {
+        return BlogPostRepo::all()
+                           ->where('published_at', '<', $post->published_at)
+                           ->sortByDesc('published_at')
+                           ->first();
+    }
+
+    /**
+     * @return BlogPost|null
+     */
+    public static function findBySlug($slug)
+    {
+        return BlogPostRepo::all()->whereSlug($slug)->first();
+    }
+
+
+    /**
      * @return BlogPostCollection|BlogPost[]
      */
     public static function published()

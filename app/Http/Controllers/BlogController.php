@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\BlogPost;
+use App\BlogPostRepo;
 
 class BlogController extends Controller
 {
@@ -16,13 +16,13 @@ class BlogController extends Controller
             'head_image' => asset('img/bg.jpg'),
             'head_image_width' => 2400,
             'head_image_height' => 1600,
-            'blog_posts' => BlogPost::published(),
+            'blog_posts' => BlogPostRepo::published(),
         ]);
     }
 
     public function blogPost($slug)
     {
-        if (!$post = BlogPost::findBySlug($slug)) {
+        if (!$post = BlogPostRepo::findBySlug($slug)) {
             abort(404);
         }
 
@@ -38,7 +38,7 @@ class BlogController extends Controller
             'head_article_published_time' => $post->published_at->format('c'),
             'head_article_modified_time' => $post->modified_at->format('c'),
             'blog_post' => $post,
-            'next_blog_post' => BlogPost::findNextOf($post),
+            'next_blog_post' => BlogPostRepo::findNextOf($post),
         ]);
     }
 }

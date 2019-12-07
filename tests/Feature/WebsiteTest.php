@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\BlogPost;
+use App\BlogPostRepo;
 use Tests\TestCase;
 
 class WebsiteTest extends TestCase
@@ -18,7 +18,7 @@ class WebsiteTest extends TestCase
 
     public function testBlogPostPage()
     {
-        $posts = BlogPost::all();
+        $posts = BlogPostRepo::all();
         foreach ($posts as $post) {
             $this->get($post->url)
                  ->assertStatus(200)

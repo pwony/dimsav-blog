@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use App\BlogPost;
 use App\BlogPostCollection;
+use App\BlogPostRepo;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -13,7 +14,7 @@ class BlogPostTest extends TestCase
 {
     public function testFetchingAllPosts()
     {
-        $posts = BlogPost::all();
+        $posts = BlogPostRepo::all();
 
         $this->assertInstanceOf(BlogPostCollection::class, $posts);
         $this->assertTrue($posts->count() > 0);
@@ -22,13 +23,13 @@ class BlogPostTest extends TestCase
 
     public function testFindBySlug()
     {
-        $post = BlogPost::all()->first();
-        $this->assertEquals($post, BlogPost::findBySlug($post->slug));
+        $post = BlogPostRepo::all()->first();
+        $this->assertEquals($post, BlogPostRepo::findBySlug($post->slug));
     }
 
     public function testFetchAllPublished()
     {
-        $posts = BlogPost::published();
+        $posts = BlogPostRepo::published();
         $this->assertInstanceOf(BlogPostCollection::class, $posts);
         $this->assertTrue($posts->count() > 0);
         $this->assertInstanceOf(BlogPost::class, $posts->first());
@@ -39,9 +40,9 @@ class BlogPostTest extends TestCase
 
     public function testPublishedDoesNotContainArticlesPostedInFuture()
     {
-        $post = BlogPost::published()->first();
+        $post = BlogPostRepo::published()->first();
         $this->timeTravel($post->published_at->subDay());
-        $publishedPost = BlogPost::published()
+        $publishedPost = BlogPostRepo::published()
                                  ->filter(function (BlogPost $postIteration) use ($post) {
                                      return $postIteration->slug == $post->slug;
                                  })->first();
@@ -50,7 +51,7 @@ class BlogPostTest extends TestCase
 
     public function testAllBlogPostsContainRequiredProperties()
     {
-        foreach (BlogPost::all() as $post) {
+        foreach (BlogPostRepo::all() as $post) {
             $this->assertPositiveInteger($post->id);
             $this->assertTrue(Str::length($post->title) > 0);
             $this->assertTrue(Str::length($post->title) <= 70);

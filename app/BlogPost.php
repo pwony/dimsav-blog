@@ -51,50 +51,6 @@ class BlogPost implements Feedable
     }
 
     /**
-     * @return BlogPostCollection|BlogPost[]
-     */
-    public static function all()
-    {
-        $collection = new BlogPostCollection;
-        foreach (config('blog-posts') as $config) {
-            $collection->push(new BlogPost($config));
-        }
-        return $collection->sortByDesc(function (BlogPost $post) {
-            return $post->published_at;
-        });
-    }
-
-    /**
-     * @return BlogPost|null
-     */
-    public static function findBySlug($slug)
-    {
-        return static::all()->whereSlug($slug)->first();
-    }
-
-    /**
-     * @param BlogPost $post
-     *
-     * @return BlogPost|null
-     */
-    public static function findNextOf(BlogPost $post)
-    {
-        return static::all()
-              ->where('published_at', '<', $post->published_at)
-              ->sortByDesc('published_at')
-              ->first();
-    }
-
-    /**
-     * @return BlogPostCollection|BlogPost[]
-     */
-    public static function published()
-    {
-        return static::all()->onlyPublished();
-    }
-
-
-    /**
      * @return array|\Spatie\Feed\FeedItem
      */
     public function toFeedItem()

@@ -1,4 +1,4 @@
 {{ route('home') }}
-@foreach(App\BlogPost::published() as $post)
+@foreach(App\BlogPostRepo::published() as $post)
 {{ route('blog-post', $post->slug) }}
 @endforeach
