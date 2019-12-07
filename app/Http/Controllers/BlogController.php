@@ -8,14 +8,10 @@ class BlogController extends Controller
 {
     public function home()
     {
-        $head_description = 'I\'m a web developer and indie hacker at metabook,'.
-            ' and also a Co-organizer of the Laravel Athens User group and author '.
-            'of Laravel Translatable.';
-
         return view('home', [
             'head_canonical_url' => route('home'),
-            'head_page_title' => 'Dimitris Blog',
-            'head_description' => $head_description,
+            'head_page_title' => config('blog.site_name'),
+            'head_description' => config('blog.site_description'),
             'head_og_type' => 'website',
             'head_image' => asset('img/bg.jpg'),
             'head_image_width' => 2400,

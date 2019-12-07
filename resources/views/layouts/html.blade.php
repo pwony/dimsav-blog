@@ -87,6 +87,7 @@
     }
 }
 </script>
+<link rel="alternate" type="application/atom+xml" title="{{ config('blog.site_name') }}" href="/feed">
 </head>
 <body class="text-gray-800">
     <style>

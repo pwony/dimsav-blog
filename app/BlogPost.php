@@ -4,8 +4,10 @@ namespace App;
 
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
 
-class BlogPost
+class BlogPost implements Feedable
 {
     public $id;
     public $title;
@@ -89,5 +91,21 @@ class BlogPost
     public static function published()
     {
         return static::all()->onlyPublished();
+    }
+
+
+    /**
+     * @return array|\Spatie\Feed\FeedItem
+     */
+    public function toFeedItem()
+    {
+        return FeedItem::create([
+            'id' => $this->id,
+            'title' => $this->title,
+            'summary' => $this->summary,
+            'updated' => $this->modified_at,
+            'link' => $this->url,
+            'author' => 'Dimitris Savvopoulos',
+        ]);
     }
 }
