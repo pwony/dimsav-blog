@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\BlogPost;
 
-class HomeController extends Controller
+class BlogController extends Controller
 {
     public function home()
     {
