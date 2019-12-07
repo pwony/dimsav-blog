@@ -15,7 +15,7 @@
 
     <p class="text-xl md:text-2xl px-5 my-12">
         One day, the tv at home was on this channel, and my kids were watching these commercials
-        promoting toys. They were so aggressive I felt discussed. Later the same day, my son asked
+        promoting toys. They were so aggressive I felt disgusted. Later the same day, my son asked
         me (of course) to buy him many of the toys he watched on the ads earlier.
     </p>
 
