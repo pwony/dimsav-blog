@@ -10,6 +10,9 @@
     <link rel="canonical" href="{{ $head_canonical_url }}" />
     <meta name="description" content="{{ $head_description }}" />
     <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+    @if(isset($head_next_url) && $head_next_url)
+        <link rel="next" href="{{ $head_next_url }}" />
+    @endif
 
     {{--  Styles  --}}
     <link href="/css/tailwind.min.css" rel="stylesheet">

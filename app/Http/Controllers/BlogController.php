@@ -26,6 +26,8 @@ class BlogController extends Controller
             abort(404);
         }
 
+        $nextPost = BlogPostRepo::findNextOf($post);
+
         return view('posts.'.$post->id, [
             'head_canonical_url' => $post->url,
             'head_page_title' => $post->title,
@@ -38,7 +40,8 @@ class BlogController extends Controller
             'head_article_published_time' => $post->published_at->format('c'),
             'head_article_modified_time' => $post->modified_at->format('c'),
             'blog_post' => $post,
-            'next_blog_post' => BlogPostRepo::findNextOf($post),
+            'next_blog_post' => $nextPost,
+            'head_next_url' => $nextPost ? $nextPost->url : null,
         ]);
     }
 }
