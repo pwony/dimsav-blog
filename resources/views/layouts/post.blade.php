@@ -3,7 +3,7 @@
 @section('html-content')
 
     <header style="background-image: url({{ $site_image_url }}); background-position: center 10%;"
-            class="bg-cover bg-no-repeat" >
+            class="bg-cover bg-no-repeat">
         <a href="{{ route('home') }}">
             <div class="flex flex-row items-center justify-center py-4 mx-auto text-blue-100 "
                  style="max-width: 900px;">
@@ -16,10 +16,10 @@
             </div>
         </a>
     </header>
-{{--
-    Prioritize header image. Idea stolen from
-    https://justmarkup.com/articles/2015-02-02-prioritize-loading-of-background-images/
---}}
+    {{--
+        Prioritize header image. Idea stolen from
+        https://justmarkup.com/articles/2015-02-02-prioritize-loading-of-background-images/
+    --}}
     <img src="{{ $site_image_url }}" alt="" style="display: none;">
     <img src="{{ $blog_post->image_url }}" alt="" style="display: none;">
 
@@ -39,5 +39,8 @@
             @yield('post-content')
         </div>
     </div>
+    @if($next_blog_post)
+        @include('partials.post-preview', ['blog_post' => $next_blog_post])
+    @endif
 
 @endsection

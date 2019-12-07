@@ -42,6 +42,7 @@ class BlogController extends Controller
             'head_article_published_time' => $post->published_at->format('c'),
             'head_article_modified_time' => $post->modified_at->format('c'),
             'blog_post' => $post,
+            'next_blog_post' => BlogPost::findNextOf($post),
         ]);
     }
 }
