@@ -6,6 +6,11 @@
     <channel>
         <title><![CDATA[{{ $meta['title'] }}]]></title>
         <link><![CDATA[{{ url($meta['link']) }}]]></link>
+        <image>
+            <url>{{ asset('img/dimitrios-savvopoulos-web-square-big.jpg') }}</url>
+            <title>{{ config('blog.site_name') }}</title>
+            <link>{{ route('home') }}</link>
+        </image>
         <description><![CDATA[{{ $meta['description'] }}]]></description>
         <language>{{ $meta['language'] }}</language>
         <pubDate>{{ $meta['updated'] }}</pubDate>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>{{ $head_page_title }}</title>
+    <link rel="alternate" type="{{ config('feed.feeds.main.type') }}" title="{{ config('blog.site_name') }}" href="/feed">
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -87,7 +88,6 @@
     }
 }
 </script>
-<link rel="alternate" type="application/atom+xml" title="{{ config('blog.site_name') }}" href="/feed">
 </head>
 <body class="text-gray-800">
     <style>
