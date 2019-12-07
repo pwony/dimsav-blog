@@ -57,7 +57,9 @@ class BlogPost
         foreach (config('blog-posts') as $config) {
             $collection->push(new BlogPost($config));
         }
-        return $collection;
+        return $collection->sortByDesc(function (BlogPost $post){
+            return $post->published_at;
+        });
     }
 
     /**

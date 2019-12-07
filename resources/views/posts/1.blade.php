@@ -3,6 +3,10 @@
 @section('post-content')
 
     <p class="text-xl md:text-2xl px-5 my-12">
+        {{ $blog_post->summary }}
+    </p>
+    
+    <p class="text-xl md:text-2xl px-5 my-12">
         jQuery? Yes, jQuery.
     </p>
 

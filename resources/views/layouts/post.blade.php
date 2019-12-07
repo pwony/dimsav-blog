@@ -36,10 +36,6 @@
                 {{ $blog_post->title }}
             </div>
 
-            <p class="text-xl md:text-2xl px-5 my-12">
-                {{ $blog_post->summary }}
-            </p>
-
             @yield('post-content')
         </div>
     </div>
