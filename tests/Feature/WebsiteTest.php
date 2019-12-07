@@ -34,4 +34,19 @@ class WebsiteTest extends TestCase
     {
         $this->get('/blog/foobar')->assertStatus(404);
     }
+
+    public function testFeedPage()
+    {
+        $this->get('/feed')->assertStatus(200);
+    }
+
+    public function testSitemapPage()
+    {
+        $this->get('/sitemap.txt')->assertStatus(200);
+    }
+
+    public function testRobotsPage()
+    {
+        $this->get('/robots.txt')->assertStatus(200);
+    }
 }
