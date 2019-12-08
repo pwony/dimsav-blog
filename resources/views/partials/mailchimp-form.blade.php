@@ -1,5 +1,5 @@
 <div class="mb-4  ">
-    Was this useful to you?
+    Was this useful?
 </div>
 
 <!-- Begin Mailchimp Signup Form -->
