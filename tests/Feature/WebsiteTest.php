@@ -22,8 +22,8 @@ class WebsiteTest extends TestCase
         foreach ($posts as $post) {
             $this->get($post->url)
                  ->assertStatus(200)
-                 ->assertSeeText($post->title)
-                 ->assertSeeText($post->summary)
+                 ->assertSeeText(e($post->title))
+                 ->assertSeeText(e($post->summary))
                  ->assertSeeText($post->published_date)
                  ->assertSee('<link rel="canonical" href="')
                  ->assertDontSee('<link rel="canonical" href=""');
