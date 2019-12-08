@@ -15,3 +15,23 @@ artisan ide-helper:meta
 
 * [Tell google about it](https://support.google.com/webmasters/answer/7451001) by submitting 
 the URL of the auto generated /sitemap.txt file
+
+## Syntax
+
+### Paragraph
+```
+@component('p')
+@endcomponent
+```
+
+### Code block
+```
+@component('code')
+@endcomponent
+```
+
+### Inline code
+```
+@component('inline-code') 
+@endcomponent
+```
