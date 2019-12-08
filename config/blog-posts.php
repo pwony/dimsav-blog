@@ -2,6 +2,18 @@
 
 return [
     [
+        'id' => 6,
+        'title' => 'Hello World!',
+        'summary' => 'I am very happy to announce the release of my personal website!',
+        'slug' => 'hello-world',
+        'published_at' => '2013-11-25 13:00',
+        'modified_at' => '2019-12-08 13:00',
+        'image_url' => '/blog-img/6.jpg',
+        'image_width' => 1300,
+        'image_height' => 700,
+        'subjects' => ['Introduction'],
+    ],
+    [
         'id' => 5,
         'title' => 'Git repository inside composer vendors',
         'summary' => 'How to use git when developing a laravel package.',
