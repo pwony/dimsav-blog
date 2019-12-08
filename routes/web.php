@@ -9,3 +9,5 @@ Route::feeds();
 
 Route::get('/blog/posts/testing-a-live-site-with-laravel-dusk-using-docker-compose-20',
     'SeoController@duskArticle');
+Route::get('/blog/20/testing-a-live-site-with-laravel-dusk-using-docker-compose',
+    'SeoController@duskArticle');
