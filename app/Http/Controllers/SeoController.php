@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\BlogPostRepo;
+
 class SeoController
 {
     public function duskArticle()
     {
-        return redirect(route('blog-post', 'testing-a-live-site-with-laravel-dusk-using-docker-compose'), 301);
+        return redirect(BlogPostRepo::findById(3)->url, 301);
     }
 
     public function s3Article()
     {
-        return redirect(route('blog-post', 'how-to-reduce-aws-s3-costs-by-caching-pictures-locally'), 301);
+        return redirect(BlogPostRepo::findById(4)->url, 301);
     }
 
     public function goHome()

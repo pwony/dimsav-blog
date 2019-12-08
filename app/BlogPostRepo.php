@@ -40,6 +40,11 @@ class BlogPostRepo
         return BlogPostRepo::all()->whereSlug($slug)->first();
     }
 
+    public static function findById($id)
+    {
+        return BlogPostRepo::all()->whereId($id)->first();
+    }
+
 
     /**
      * @return BlogPostCollection|BlogPost[]

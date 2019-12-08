@@ -25,4 +25,11 @@ class BlogPostCollection extends Collection
             return $post->slug == $slug;
         });
     }
+
+    public function whereId($id)
+    {
+        return $this->filter(function (BlogPost $post) use ($id) {
+            return $post->id == $id;
+        });
+    }
 }
