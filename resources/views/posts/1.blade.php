@@ -39,9 +39,10 @@
         with jQuery was the fact that vue lives in what we all know as a root component and I
         call a "silo".
     @endcomponent
-    <h2 class="font-bold text-xl md:text-2xl px-5 my-12">
+
+    @component('h2')
         What tutorials teach
-    </h2>
+    @endcomponent
     @component('p')
         If you have your whole html code wrapped inside a single root component, then you have a
         big big silo belonging to Vue.js. I know, this is what tutorials teach. But if this how
@@ -77,9 +78,9 @@
         Enough with the theory and the sentimental talk. Let's see some code.
     @endcomponent
 
-    <h2 class="font-bold text-xl md:text-2xl px-5 my-12">
+    @component('h2')
         The code
-    </h2>
+    @endcomponent
 
     @component('p')
         On our passion project <a href="https://metabook.gr">metabook.gr</a> (don't open the link,

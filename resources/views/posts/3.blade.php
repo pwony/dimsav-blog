@@ -4,7 +4,9 @@
 
     @component('p')First things first.@endcomponent
 
-    <h2 class="font-bold text-xl md:text-2xl px-5 my-12">Installing dusk into laravel</h2>
+    @component('h2')
+        Installing dusk into laravel
+    @endcomponent
 
     @component('p')In our laravel application we follow the first steps as shown in the
         <a href="https://laravel.com/docs/5.4/dusk#introduction">official documentation</a>. So we
@@ -41,9 +43,9 @@ php artisan dusk:install
 
     @component('p')Ok. Nothing new so far.@endcomponent
 
-    <h2 class="font-bold text-xl md:text-2xl px-5 my-12">
+    @component('h2')
         Installing docker with docker compose
-    </h2>
+    @endcomponent
 
     @component('p')I&#39;m not going to describe how to install docker on your machine because it differs for
        every operating system. It&#39;s best to follow the official instructions from docker &nbsp;[Docker
@@ -58,7 +60,9 @@ docker-compose version 1.11.2, build dfed245
 
     @component('p')Now that docker and docker-compose are properly setup, we go to the next step.@endcomponent
 
-    <h2 class="font-bold text-xl md:text-2xl px-5 my-12">The docker-compose file</h2>
+    @component('h2')
+        The docker-compose file
+    @endcomponent
 
     @component('p')Let&#39;s make a new `ci` directory under our project rood folder and put a new file named
        `selenium-docker-compose.yml` in it.@endcomponent
@@ -126,7 +130,9 @@ image: php:7.1.1-cli
 
     @component('p')We&#39;re almost there. The next step is to ...@endcomponent
 
-    <h2 class="font-bold text-xl md:text-2xl px-5 my-12">Setup Laravel Dusk to use our selenium instance</h2>
+    @component('h2')
+        Setup Laravel Dusk to use our selenium instance
+    @endcomponent
 
     @component('p')Open the file `tests/DuskTestCase.php` and update the `driver()` method to look like
        this:@endcomponent
@@ -145,7 +151,9 @@ protected function driver()
 
     @component('p')Last step.@endcomponent
 
-    <h2 class="font-bold text-xl md:text-2xl px-5 my-12">Our first test</h2>
+    @component('h2')
+        Our first test
+    @endcomponent
 
     @component('p')At this final step we will be creative. Go to the DustTestCase and add the following
        method:@endcomponent
@@ -203,7 +211,9 @@ run dusk_tests bash -c &#39;cd /usr/src/myapp &amp;&amp; php artisan dusk&#39;
 
     @component('p')Alright I lied. This is the next step.@endcomponent
 
-    <h2 class="font-bold text-xl md:text-2xl px-5 my-12">Make the tests fail</h2>
+    @component('h2')
+        Make the tests fail
+    @endcomponent
 
     @component('p')I wanted to show you a nice way of debugging when things go wrong.&nbsp;@endcomponent
 
