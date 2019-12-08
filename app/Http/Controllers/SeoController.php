@@ -16,6 +16,11 @@ class SeoController
         return redirect(BlogPostRepo::findById(4)->url, 301);
     }
 
+    public function composerArticle()
+    {
+        return redirect(BlogPostRepo::findById(5)->url, 301);
+    }
+
     public function goHome()
     {
         return redirect(route('home'), 301);

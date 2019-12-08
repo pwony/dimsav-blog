@@ -2,6 +2,18 @@
 
 return [
     [
+        'id' => 5,
+        'title' => 'Git repository inside composer vendors',
+        'summary' => 'How to use git when developing a laravel package.',
+        'slug' => 'git-repository-inside-composer-vendors',
+        'published_at' => '2014-02-08 13:00',
+        'modified_at' => '2014-02-08 13:00',
+        'image_url' => '/blog-img/5.jpg',
+        'image_width' => 1300,
+        'image_height' => 700,
+        'subjects' => ['PHP', 'Composer', 'Git', 'PhpStorm'],
+    ],
+    [
         'id' => 4,
         'title' => 'How to reduce AWS S3 costs by caching pictures locally',
         'summary' => 'I wanted to use S3 as a storage and backup, but I didn\'t want to get additionally '.
