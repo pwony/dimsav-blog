@@ -2,6 +2,19 @@
 
 return [
     [
+        'id' => 4,
+        'title' => 'How to reduce AWS S3 costs by caching pictures locally',
+        'summary' => 'I wanted to use S3 as a storage and backup, but I didn\'t want to get additionally '.
+            'charged from AWS S3 for the pictures bandwidth.',
+        'slug' => 'how-to-reduce-aws-s3-costs-by-caching-pictures-locally',
+        'published_at' => '2017-04-23 13:00',
+        'modified_at' => '2017-04-23 13:00',
+        'image_url' => '/blog-img/4.jpg',
+        'image_width' => 1300,
+        'image_height' => 867,
+        'subjects' => ['PHP', 'nginx', 'AWS', 'S3', 'Laravel'],
+    ],
+    [
         'id' => 3,
         'title' => 'Testing a live site with Laravel Dusk using Docker Compose ',
         'summary' => 'Sharing how you can quickly install and run Laravel Dusk for testing your project using Docker.',
