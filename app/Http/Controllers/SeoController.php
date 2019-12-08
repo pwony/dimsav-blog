@@ -11,14 +11,20 @@ class SeoController
         return redirect(BlogPostRepo::findById(3)->url, 301);
     }
 
-    public function s3Article()
+    public function oldArticleNewUrl($oldArticleId)
     {
-        return redirect(BlogPostRepo::findById(4)->url, 301);
-    }
-
-    public function composerArticle()
-    {
-        return redirect(BlogPostRepo::findById(5)->url, 301);
+        $mapToPost = [
+            1 => 6,
+            9 => 5,
+            18 => 4,
+            20 => 3,
+        ];
+        if (isset($mapToPost[$oldArticleId])) {
+            $newId = $mapToPost[$oldArticleId];
+            return redirect(BlogPostRepo::findById($newId)->url, 301);
+        }
+        // 5, 11, 12, 14,
+        return redirect(route('home'), 301);
     }
 
     public function goHome()
