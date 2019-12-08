@@ -13,13 +13,13 @@
        add the laravel dusk composer dependency:
     @endcomponent
 
-    @component('partials.code')
+    @component('code')
     composer require laravel/dusk
     @endcomponent
 
     @component('p')Then, we add the service provider in our AppServiceProvider:@endcomponent
 
-    @component('partials.code')
+    @component('code')
 use Laravel\Dusk\DuskServiceProvider;
 
 /**
@@ -37,7 +37,7 @@ public function register()
 
     @component('p')And finally, we run the `dusk:install` Artisan command:@endcomponent
 
-    @component('partials.code')
+    @component('code')
 php artisan dusk:install
     @endcomponent
 
@@ -53,7 +53,7 @@ php artisan dusk:install
 
     @component('p')You know you&#39;re ready when the following command shows the version of docker-compose:@endcomponent
 
-    @component('partials.code')
+    @component('code')
 $ docker-compose -v
 docker-compose version 1.11.2, build dfed245
     @endcomponent
@@ -69,7 +69,7 @@ docker-compose version 1.11.2, build dfed245
 
     @component('p')The contents of this yml file should be:@endcomponent
 
-    @component('partials.code')
+    @component('code')
 version: &#39;2&#39;
 services:
 
@@ -87,7 +87,7 @@ services:
 
     @component('p')Here we define two docker instances we will use.@endcomponent
 
-    @component('partials.code')
+    @component('code')
 dusk_tests:
 image: php:7.1.1-cli
     @endcomponent
@@ -95,13 +95,13 @@ image: php:7.1.1-cli
     @component('p')First we have a `dusk_tests`. This is a machine with php-cli installed. We will run `php
        artisan dusk` from within this machine.&nbsp;@endcomponent
 
-    @component('partials.code')
+    @component('code')
     command: tail -f /dev/null
     @endcomponent
 
     @component('p')This skips the default command of the php instance.@endcomponent
 
-    @component('partials.code')
+    @component('code')
     volumes:
       - ../:/usr/src/myapp
     @endcomponent
@@ -110,7 +110,7 @@ image: php:7.1.1-cli
        `/usr/src/myapp` of the php instance.@endcomponent
 
 
-    @component('partials.code')
+    @component('code')
     links:
       - selenium
     @endcomponent
@@ -120,7 +120,7 @@ image: php:7.1.1-cli
        within the php instance and reach the port 80 of the selenium instance. Pretty handy.@endcomponent
 
 
-    @component('partials.code')
+    @component('code')
   selenium:
     image: selenium/standalone-chrome:3.0.1-fermium
     @endcomponent
@@ -137,7 +137,7 @@ image: php:7.1.1-cli
     @component('p')Open the file `tests/DuskTestCase.php` and update the `driver()` method to look like
        this:@endcomponent
 
-    @component('partials.code')
+    @component('code')
 protected function driver()
 {
     return RemoteWebDriver::create(
@@ -158,7 +158,7 @@ protected function driver()
     @component('p')At this final step we will be creative. Go to the DustTestCase and add the following
        method:@endcomponent
 
-@component('partials.code')
+@component('code')
 protected function baseUrl()
 {
     return &#39;https://google.com&#39;;
@@ -170,7 +170,7 @@ protected function baseUrl()
     @component('p')Now go to the &#39;Browser/ExampleTest.php&#39; and assert we see the text &quot;Google&quot;
        at google&#39;s home page.&nbsp;@endcomponent
 
-@component('partials.code')
+@component('code')
 public function testBasicExample()
 {
     $this-&gt;browse(function (Browser $browser) {
@@ -182,19 +182,19 @@ public function testBasicExample()
 
     @component('p')Let&#39;s run our tests. From the root path of your app, run the following command:@endcomponent
 
-@component('partials.code')
+@component('code')
 $ docker-compose -f ci/selenium-docker-compose.yml run dusk_tests bash -c &#39;cd /usr/src/myapp &amp;&amp; php artisan dusk&#39;
 @endcomponent
 
     @component('p')Let&#39;s explain:@endcomponent
 
-@component('partials.code')
+@component('code')
 -f ci/selenium-docker-compose.yml
 @endcomponent
 
     @component('p')Here we tell compose to use the file we created.@endcomponent
 
-@component('partials.code')
+@component('code')
 run dusk_tests bash -c &#39;cd /usr/src/myapp &amp;&amp; php artisan dusk&#39;
 @endcomponent
 
@@ -219,7 +219,7 @@ run dusk_tests bash -c &#39;cd /usr/src/myapp &amp;&amp; php artisan dusk&#39;
 
     @component('p')Go ahead and change the assertion in the test to something like:@endcomponent
 
-@component('partials.code')
+@component('code')
 -&gt;assertSee(&#39;Moogle&#39;)
 @endcomponent
 

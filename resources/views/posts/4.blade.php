@@ -68,7 +68,7 @@
         The first time the server receives a request for this a file, the file is not on the server, so it hits laravel. We handle the request by using the following route:
     @endcomponent
 
-    @component('partials.code')
+    @component('code')
     Route::get("/pictures/{filename}", function ($filename) {
     // Load image from S3
     $f = Storage::disk('s3-pictures')->get('pictures-path/'.$filename);

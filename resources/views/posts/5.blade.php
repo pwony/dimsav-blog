@@ -30,7 +30,7 @@
         option.
     @endcomponent
 
-    @component('partials.code')
+    @component('code')
         $ composer update --prefer-source
     @endcomponent
 
@@ -44,7 +44,7 @@
         or commit, simply chdir to the package's root directory:
     @endcomponent
 
-@component('partials.code')
+@component('code')
 $ cd vendor/author/package-name
 $ git status
 @endcomponent
@@ -59,7 +59,7 @@ $ git status
     push to origin.
     @endcomponent
 
-@component('partials.code')
+@component('code')
 $ git remote
 composer
 origin

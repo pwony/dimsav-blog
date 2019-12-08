@@ -93,7 +93,7 @@
     @component('p')
         Anyway, this is the html code of our vue component:
     @endcomponent
-@component('partials.code')
+@component('code')
 {{ '<lazy-img class="vue-root" src="/image.jpg">' }}
 @endcomponent
     @component('p')
@@ -106,7 +106,7 @@
         </span>
     @endcomponent
 
-@component('partials.code')
+@component('code')
 {{ "import LazyImg from './vue/lazy-img'" }}
 {{ 'const vueRootElements = document.querySelectorAll(".vue-root");' }}
 {{ 'Array.prototype.forEach.call(vueRootElements, (el) =>' }}
