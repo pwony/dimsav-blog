@@ -55,8 +55,7 @@
     @component('p')
         One characteristic of Vue.js is it absorbs all the window events. Something like a black
         hole. This means that jQuery's
-        <span class="inline-block bg-gray-200 rounded px-2
-        py-1 font-mono text-sm mx-1">on.('click')</span>
+        @component('inline-code') on.('click') @endcomponent
         wouldn't work inside a vue component. Your top navigation and hamburger menu code coded
         with jQuery would stop work for instance.
     @endcomponent
