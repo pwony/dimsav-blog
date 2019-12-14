@@ -9,7 +9,7 @@
     >
         <div class="w-full mb-2">
             <input type="email" value="" name="EMAIL" id="mce-EMAIL"
-                   placeholder="email address" required autofocus
+                   placeholder="email address" required
                    class="email p-4 rounded w-full inline-block bg-white border border-gray-500 py-2">
         </div>
         <div class=" w-full">
