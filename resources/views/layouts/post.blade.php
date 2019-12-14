@@ -27,7 +27,7 @@
          style="background-image: url({{ $blog_post->image_url }});"
     ></div>
 
-    <div class="bg-white pb-12">
+    <div class="bg-white pb-1">
         <div style="max-width: 900px;" class="mx-auto">
             <div class="text-center text-lg pt-16 text-gray-500 ">
                 {{ $blog_post->published_date }}
@@ -41,7 +41,7 @@
     </div>
     <div class="bg-gray-200 text-center">
         <div class="mx-auto px-5 text-xl" style="max-width: 900px;">
-            <div class="p-4">
+            <div class="p-1">
                 @include('partials.mailchimp-form')
             </div>
         </div>
