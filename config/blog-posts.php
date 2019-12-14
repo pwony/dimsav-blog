@@ -2,6 +2,18 @@
 
 return [
     [
+        'id' => 7,
+        'title' => 'The database can be avoided',
+        'summary' => 'Why we should think before adding the database as a dependency.',
+        'slug' => 'the-database-can-be-avoided',
+        'published_at' => '2019-12-14 22:50',
+        'modified_at' => '2019-12-14 22:50',
+        'image_url' => '/blog-img/7.jpg',
+        'image_width' => 1300,
+        'image_height' => 700,
+        'subjects' => ['Database', 'Open Source', 'Coding'],
+    ],
+    [
         'id' => 6,
         'title' => 'Hello World!',
         'summary' => 'I am very happy to announce the release of my personal website!',

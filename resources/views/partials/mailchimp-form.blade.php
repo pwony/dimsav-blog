@@ -1,5 +1,5 @@
 @component('p')
-    <label for="mce-EMAIL">Would you like me to email you new articles?</label>
+    <label for="mce-EMAIL">Would you like me to notify you about new articles?</label>
 @endcomponent
 
 <div id="mc_embed_signup" class="px-4 -mt-5 mb-5" style="clear:left; width:100%;">
