@@ -3,19 +3,19 @@
 @section('post-content')
 
     @component('p')
-        Long time ago I was working as junior software engineer at a software agency.
+        Long time ago I was working as a junior software engineer at a software agency.
     @endcomponent
 
     @component('p')
         One day, during the weekly developer meeting, we were discussing the creation of an internal app that would help us manage incoming support tickets.
         So at some point during the conversation, we started talking about how we were going to organize those tickets
-        and we decided use tags. Tags for feature requests, bug reports, complaints, etc.
+        and we decided to use tags. Tags for feature requests, bug reports, complaints, etc.
     @endcomponent
 
     @component('p')
         Back then, we used mysql pretty much at every project to store data. No matter what it was, it was inside a mysql table.
         We knew that tags would be a very limited set and that they wouldn't change them often, if at all.
-        Of course we discussed about the "tags" db table and then I thought, wait a moment...
+        Of course we discussed the details including the need for a "tags" db table and then I thought, wait a moment...
     @endcomponent
 
     @component('p')
@@ -69,7 +69,7 @@
         That's why I decided to build this blog without a database. It is
         <a href="https://github.com/dimsav/dimsav-blog">open source</a> so you can see how blog posts
         are written.
-        It doesn't use any db because it does't need one.
+        It doesn't use any db because it doesn't need one.
     @endcomponent
 
     @component('p')
