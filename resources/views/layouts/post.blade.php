@@ -39,15 +39,14 @@
             @yield('post-content')
         </div>
     </div>
-    @if($next_blog_post)
-        @include('partials.post-preview', ['blog_post' => $next_blog_post])
-    @endif
-
     <div class="bg-gray-200 text-center">
-        <div class="mx-auto py-5 px-5 text-xl" style="max-width: 900px;">
-            <div class=" p-4">
+        <div class="mx-auto px-5 text-xl" style="max-width: 900px;">
+            <div class="p-4">
                 @include('partials.mailchimp-form')
             </div>
         </div>
     </div>
+    @if($next_blog_post)
+        @include('partials.post-preview', ['blog_post' => $next_blog_post])
+    @endif
 @endsection
