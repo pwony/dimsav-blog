@@ -35,6 +35,11 @@
             <h1 class="pt-8 pb-2 px-5 text-center text-3xl sm:text-5xl md:text-5xl font-bold ">
                 {{ $blog_post->title }}
             </h1>
+            <div class="flex flex-row justify-center">
+                @foreach($blog_post->subjects as $subject)
+                    <span class="mr-5">{{ $subject }}</span>
+                @endforeach
+            </div>
 
             @yield('post-content')
         </div>

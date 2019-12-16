@@ -11,7 +11,7 @@ return [
         'image_url' => '/blog-img/7.jpg',
         'image_width' => 1300,
         'image_height' => 700,
-        'subjects' => ['Database', 'Open Source', 'Coding'],
+        'subjects' => ['Simplicity', 'Coding', 'Open Source', ],
     ],
     [
         'id' => 6,
@@ -48,7 +48,7 @@ return [
         'image_url' => '/blog-img/4.jpg',
         'image_width' => 1300,
         'image_height' => 867,
-        'subjects' => ['PHP', 'nginx', 'AWS', 'S3', 'Laravel'],
+        'subjects' => ['PHP', 'Nginx', 'AWS', 'S3', 'Laravel'],
     ],
     [
         'id' => 3,
@@ -60,7 +60,7 @@ return [
         'image_url' => '/blog-img/3.jpg',
         'image_width' => 1300,
         'image_height' => 612,
-        'subjects' => ['PHP', 'docker', 'Laravel', 'dusk', 'selenium'],
+        'subjects' => ['PHP', 'Docker', 'Laravel', 'Dusk', 'Selenium'],
     ],
     [
         'id' => 2,
@@ -72,7 +72,7 @@ return [
         'image_url' => '/blog-img/2.jpg',
         'image_width' => 1300,
         'image_height' => 844,
-        'subjects' => ['commercials', 'parenting', 'tv'],
+        'subjects' => ['Commercials', 'Parenting', 'Tv'],
     ],
     [
         'id' => 1,

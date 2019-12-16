@@ -5,7 +5,12 @@
             <div class="mb-2 text-4xl sm:text-5xl md:text-6xl font-bold"
             >{{ $blog_post->title }}
             </div>
-            <div class="sm:text-lg md:text-xl mb-6">{{ $blog_post->published_ago }}</div>
+            <div class="mb-6">
+                @foreach($blog_post->subjects as $subject)
+                    <span class="mr-4 opacity-75">{{ $subject }}</span>
+                @endforeach
+            </div>
+            <div class="sm:text-lg md:text-xl mb-6 opacity-75">{{ $blog_post->published_ago }}</div>
         </div>
     </div>
     <div class="relative overlay h-full mx-auto bg-cover bg-center bg-no-repeat"
