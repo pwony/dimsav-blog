@@ -1,8 +1,8 @@
 @extends('layouts.html')
 
 @section('html-content')
-    <div class="pt-24 h-screen text-blue-100 bg-cover bg-center bg-no-repeat"
-         style="background-image: url({{ $site_image_url }});">
+    <div class="pt-24 text-blue-100 bg-cover bg-center bg-no-repeat h-full md:h-1/2-screen"
+         style="background-image: url({{ $site_image_url }}); min-height: 500px;">
         <div class="flex flex-col mx-10 md:flex-row md:px-10 md:mx-auto items-center"
              style="max-width: 900px;">
             <div class="mb-10 md:mb-0 md:mr-10">
