@@ -2,6 +2,18 @@
 
 return [
     [
+        'id' => 8,
+        'title' => 'Truly zero downtime deployments with Laravel Envoyer',
+        'summary' => '',
+        'slug' => 'truly-zero-downtime-deployments',
+        'published_at' => '2020-11-06 12:00',
+        'modified_at' => '2020-11-06 12:00',
+        'image_url' => '/blog-img/8.jpg',
+        'image_width' => 1300,
+        'image_height' => 700,
+        'subjects' => ['Deployments', 'PHP'],
+    ],
+    [
         'id' => 7,
         'title' => 'The database can be avoided',
         'summary' => 'Why we should think before adding the database as a dependency.',
